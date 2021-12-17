@@ -7,7 +7,12 @@ img{ vertical-align: top; }
 a{text-decoration: none;}
 
 /* TYPOGRAPHY */
-
+html,body{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height:100%;
+}
 body{
     font-family: 'Open Sans', sans-serif;
     font-size:16px;
@@ -18,8 +23,9 @@ body{
 /* COMMON STYLE CSS */
 .sprite{ 
     display: block;
-    background: url(../images/sprites.png) no-repeat;
+    background: url(../images/sprites.png) no-repeat, #fff;
     text-indent: -9999em;
+    z-index: 1;
 }
 a{
     color:#34404b;
@@ -27,11 +33,12 @@ a{
 
 /* HEADER */
 header{
-    border-bottom:1px solid #e6e8eb;
+    position: relative;    
 }
 .h_top_nav{
     border-bottom:1px solid #e6e8eb;
     padding:22px 0;
+    background: #fff;
 }
 .social_list,
 .contact_list{
@@ -63,6 +70,10 @@ header{
 }
 .h_main_nav{
     padding:41px 0;
+    background: #fff;
+    position: relative;
+    z-index: 3;
+    border-bottom:1px solid #e6e8eb;
 }
 .gnb,
 .gnb ul{
@@ -83,6 +94,7 @@ header{
 }
 .gnb ul li a{
     line-height: 39px;
+    font-weight: 800;
 }
 .gnb ul li a:hover{
     color:#ff5912;
@@ -91,6 +103,7 @@ header{
     width:18px;
     height: 18px;
     background-position: -60px 0;
+    cursor: pointer;
 }
 .mypage{
     width: 21px;
@@ -109,4 +122,57 @@ header{
     display: flex;
     gap:34px;
     align-items: center;
+}
+.shopping_nav .cart{
+    position: relative;
+}
+.cart::before{
+    content:attr(data-cart);
+    background: #34404b;
+    position: absolute;
+    width: 18px;  line-height: 18px;
+    border-radius: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom:calc(100% + 2px);
+    font-size: 11px;
+    text-align: center;
+    color:#fff;
+    text-indent: 0;
+}
+header form{
+    position: absolute;
+    top:65px;
+    left: 0;    right: 0;
+    padding:20px 0;
+    text-align: center;
+    box-shadow: 0 5px 5px rgba(0,0,0,.1);    
+    background: #fff;
+    z-index: -1;
+    transition: .3s linear;
+}
+header form.active{
+    top: calc(100% + 1px);
+    z-index: 2;
+}
+header form input[type="text"]{
+    display:inline-block;
+    height:40px;
+    border:none;
+    border-bottom:1px solid #34404b;
+    width:540px;
+    margin-right: 10px;    
+    outline: none;
+}
+header form input[type="text"]:focus{
+    border-bottom-color: #ff5912;
+}
+header form input[type="submit"]{
+    display: inline-block;
+    border: none;
+    vertical-align: bottom;
+    cursor: pointer;
+}
+header form input[type="submit"].sprite:hover{
+    background-position-y: -30px;
 }
