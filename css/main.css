@@ -1,178 +1,246 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;800&display=swap');
-
-/* RESET CSS */
-h1,h2,h3,h4,h5,h6,ul{ font-size: 100%; line-height:1; margin: 0; padding: 0; font-weight: normal; }
-li{ list-style: none; }
-img{ vertical-align: top; }
-a{text-decoration: none;}
-
-/* TYPOGRAPHY */
-html,body{
-    padding: 0;
-    margin: 0;
-    width: 100%;
-    height:100%;
-}
-body{
-    font-family: 'Open Sans', sans-serif;
-    font-size:16px;
-    line-height: 1;
-    color:#495662;
-}
-
-/* COMMON STYLE CSS */
-.sprite{ 
-    display: block;
-    background: url(../images/sprites.png) no-repeat, #fff;
-    text-indent: -9999em;
-    z-index: 1;
-}
-a{
-    color:#34404b;
-}
-
-/* HEADER */
-header{
-    position: relative;    
-}
-.h_top_nav{
-    border-bottom:1px solid #e6e8eb;
-    padding:22px 0;
-    background: #fff;
-}
-.social_list,
-.contact_list{
-    display: flex;
-}
-.contact_list li{
-    display: flex;
-    margin-right: 20px;
-    font-size:12px;
-    line-height: 16px;
-}
-.contact_list li span{
-    margin-right:10px;
-}
-.social_list li{
-    margin-left:20px;
-}
-.social_list li a{
-    font-size: 12px;
-    line-height: 16px;
-}
-.envelope{
-    width:18px; height:16px;
-    background-position: 0 2px;
-}
-.phone{
-    width:12px; height:16px;
-    background-position: -30px 2px;
-}
-.h_main_nav{
-    padding:41px 0;
-    background: #fff;
+/* MAIN SLIDE SECTION */
+.main_slide{
     position: relative;
-    z-index: 3;
-    border-bottom:1px solid #e6e8eb;
 }
-.gnb,
-.gnb ul{
+.main_slide li{
+    background: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height:650px;
+}
+.main_slide li.slide{
+    background-image: url(../images/feature_slide_01.jpg);
+}
+.main_slide li .slide_contents{
+    height:100%;
     display: flex;
-}
-.logo{
-    margin-right: 81px;
-}
-.logo a{
-    display: block;
-    width:118px;
-    height:39px;
-    background: url(../images/shopy_log.png) no-repeat;
-    text-indent: -9999em;
-}
-.gnb ul li{
-    margin-right: 41px;
-}
-.gnb ul li a{
-    line-height: 39px;
-    font-weight: 800;
-}
-.gnb ul li a:hover{
-    color:#ff5912;
-}
-.search_btn{
-    width:18px;
-    height: 18px;
-    background-position: -60px 0;
-    cursor: pointer;
-}
-.mypage{
-    width: 21px;
-    height: 21px;
-    background-position: -90px 0;
-}
-.cart{
-    width: 24px;
-    height: 17px;
-    background-position: -120px 0;
-}
-.shopping_nav .sprite:hover{
-    background-position-y: -30px;
-}
-.shopping_nav{
-    display: flex;
-    gap:34px;
     align-items: center;
 }
-.shopping_nav .cart{
+.main_slide li .slide_contents .contents{
+    margin-left: 115px;
+}
+.main_slide li .slide_contents .price_order{
+    display: flex;
+    align-items: center;
+}
+.price_order .price{
+    color:#34404b;
+    font-size:18px;
+    font-weight: 600;
+    margin-right: 30px;
+}
+.price_order .cart{
+    margin-right: 10px;
+    font-weight: 600;
+    background-position-y: -30px;
+}
+.price_order .order_now{
+    font-size: 18px;
+    font-weight: 600;
+    color:#ff5912;
+}
+.main_slide .bx-wrapper{
     position: relative;
 }
-.cart::before{
-    content:attr(data-cart);
-    background: #34404b;
+.main_slide .bx-controls{
     position: absolute;
-    width: 18px;  line-height: 18px;
-    border-radius: 50%;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom:calc(100% + 2px);
-    font-size: 11px;
-    text-align: center;
-    color:#fff;
-    text-indent: 0;
+    top: 50%;   left: 50%;
+    transform: translate(-50%, -50%);
+    margin-left: -566px;
 }
-header form{
-    position: absolute;
-    top:65px;
-    left: 0;    right: 0;
-    padding:20px 0;
-    text-align: center;
-    box-shadow: 0 5px 5px rgba(0,0,0,.1);    
+.main_slide .bx-controls .bx-pager-item a{
+    display: block;
+    text-indent: -9999em;
+    width:10px;
+    height:17px;
     background: #fff;
-    z-index: -1;
+    margin-bottom: 9px;
     transition: .3s linear;
 }
-header form.active{
-    top: calc(100% + 1px);
-    z-index: 2;
+.main_slide .bx-controls .bx-pager-item a.active{
+    width:10px;
+    height:36px;
+    background:#ff5912;
 }
-header form input[type="text"]{
-    display:inline-block;
-    height:40px;
-    border:none;
-    border-bottom:1px solid #34404b;
-    width:540px;
-    margin-right: 10px;    
-    outline: none;
+
+/* MAIN NEW ARRIVALS SECTION */
+.new_arrivals_list .list_contents{
+    background: #fff;
+    text-align: center;
 }
-header form input[type="text"]:focus{
-    border-bottom-color: #ff5912;
+.new_arrivals_list .list_contents .default{
+    padding:30px 0;
 }
-header form input[type="submit"]{
+.new_arrivals_list .list_contents .hover{
+    padding:30px 0;
+}
+.new_arrivals_list .list_contents .default h3{
+    font-size:18px;
+    font-weight: 600;
+    margin: 28px 0;
+    color:#34404b;
+}
+.new_arrivals_list .list_contents .default h4{
+    color: #ff5912;
+    font-weight: 600;
+}
+.new_arrivals_list .list_contents .hover p{
+    font-size:14px;
+    color:#34404b;
+    margin-bottom:30px;
+}
+.new_arrivals_list .list_contents .hover .color{
+    word-spacing: -4px;
+}
+.new_arrivals_list .list_contents .hover .color span{
+    width:14px;
+    height:14px;
+    border-radius: 50%;
+    background: red;
+    text-indent: -9999em;
     display: inline-block;
-    border: none;
-    vertical-align: bottom;
-    cursor: pointer;
+    margin: 0 2.5px;
 }
-header form input[type="submit"].sprite:hover{
+.new_arrivals_list .list_contents .hover .color .red{
+    background: red;
+}
+.new_arrivals_list .list_contents .hover .color .DarkMagenta{
+    background: DarkMagenta;
+}
+.new_arrivals_list .list_contents .hover .color .LightSkyBlue{
+    background: LightSkyBlue;
+}
+.new_arrivals_list .list_contents .hover .color .LightGreen{
+    background: LightGreen;
+}
+.new_arrivals_list .list_contents .hover hr{
+    margin: 0 auto 30px;
+    width:170px;
+    border:none;
+    border-bottom: 1px solid #d9dbdf;
+}
+.new_arrivals_list .list_contents .hover ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.new_arrivals_list .list_contents .hover ul li{
+    margin: 0 15px;
+}
+.share{
+    width:19px;
+    height:18px;
+    background-position: -150px 0;
+}
+.addcart{
+    width:22px;
+    height:19px;
+    background-position: -180px 0;
+}
+.wishlist{
+    width:19px;
+    height:16px;
+    background-position: -210px 0;
+}
+.new_arrivals_list .list_contents .hover ul li a:hover{
     background-position-y: -30px;
+}
+.new_arrivals_list > li{
+    height: 365px;
+    overflow: hidden;    
+}
+.new_arrivals_list > li .default img{
+    height:216px;
+    width: auto;
+    transition:height 0.5s;
+}
+.new_arrivals_list > li .list_contents{
+    transition: box-shadow .5s;
+}
+.new_arrivals_list > li:hover .list_contents{
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+.new_arrivals_list > li:hover .default img{
+    height:60px;
+    width:auto;
+}
+.new_arrivals_list > li:hover .default h4{
+    display: none;
+}
+.new_arrivals_list > li:hover .hover{
+    padding-top: 0;
+}
+.new_arrivals > button{
+    width:100%;
+    padding: 22.5px 0;
+    border: none;
+    margin-top: 80px;
+    background: #fff;
+}
+.new_arrivals > button span{
+    display: inline-block;
+    width:38px;
+    height:8px;
+    background-position: -240px 0;
+}
+
+
+/* MAIN HOT DEAL BANNER SECTION */
+.hot_deal_banners aside{
+    display: flex;
+    gap:30px;
+}
+.hot_deal_banners aside .aside-left{
+    background: #fff;
+    padding: 10px 55px;
+    display: flex;
+    align-items: center;
+}
+.hot_deal_banners aside .aside-left .content{
+    padding:0 30px;
+}
+.hot_deal_banners aside .aside-left .content h3{
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: 800;
+    padding-bottom: 10px;
+}
+.hot_deal_banners aside .aside-left .content p{
+    font-size: 14px;
+    font-weight: 600;
+}
+.hot_deal_banners aside .aside-left .price{
+    display: flex;
+    gap: 10px;
+}
+.hot_deal_banners aside .aside-left .price > span{
+    display: inline-block;
+    width:22px;
+    height:21px;
+    background-position: -180px -28px;
+}
+.hot_deal_banners aside .aside-left .price p{
+    font-size: 24px;
+    font-weight: 600;
+    color:#ff5912
+}
+.hot_deal_banners aside .aside-left .price p > span{
+    font-size: 16px;
+    font-weight: 600;
+}
+.hot_deal_banners aside .aside-right{
+    padding:30px 0;
+    flex: 1;
+    background: #fff;
+    text-align: center;
+}
+.hot_deal_banners aside .aside-right h5{
+    font-weight:600;
+}
+.hot_deal_banners aside .aside-right h5 span{
+    color:#ff5912;
+}
+.hot_deal_banners aside .aside-right p{
+    letter-spacing: 10px;
+    padding-top: 5px;
 }

@@ -1,0 +1,145 @@
+/* HEADER */
+header{
+    position: relative;    
+}
+.h_top_nav{
+    border-bottom:1px solid #e6e8eb;
+    padding:22px 0;
+    background: #fff;
+}
+.social_list,
+.contact_list{
+    display: flex;
+}
+.contact_list li{
+    display: flex;
+    margin-right: 20px;
+    font-size:12px;
+    line-height: 16px;
+}
+.contact_list li span{
+    margin-right:10px;
+}
+.social_list li{
+    margin-left:20px;
+}
+.social_list li a{
+    font-size: 12px;
+    line-height: 16px;
+}
+.envelope{
+    width:18px; height:16px;
+    background-position: 0 2px;
+}
+.phone{
+    width:12px; height:16px;
+    background-position: -30px 2px;
+}
+.h_main_nav{
+    padding:41px 0;
+    background: #fff;
+    position: relative;
+    z-index: 3;
+    border-bottom:1px solid #e6e8eb;
+}
+.gnb,
+.gnb ul{
+    display: flex;
+}
+.logo{
+    margin-right: 81px;
+}
+.logo a{
+    display: block;
+    width:118px;
+    height:39px;
+    background: url(../images/shopy_log.png) no-repeat;
+    text-indent: -9999em;
+}
+.gnb ul li{
+    margin-right: 41px;
+}
+.gnb ul li a{
+    line-height: 39px;
+    font-weight: 800;
+}
+.gnb ul li a:hover{
+    color:#ff5912;
+}
+.search_btn{
+    width:18px;
+    height: 18px;
+    background-position: -60px 0;
+    cursor: pointer;
+}
+.mypage{
+    width: 21px;
+    height: 21px;
+    background-position: -90px 0;
+}
+.cart{
+    width: 24px;
+    height: 17px;
+    background-position: -120px 0;
+}
+.shopping_nav .sprite:hover{
+    background-position-y: -30px;
+}
+.shopping_nav{
+    display: flex;
+    gap:34px;
+    align-items: center;
+}
+.shopping_nav .cart{
+    position: relative;
+}
+.cart::before{
+    content:attr(data-cart);
+    background: #34404b;
+    position: absolute;
+    width: 18px;  line-height: 18px;
+    border-radius: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom:calc(100% + 2px);
+    font-size: 11px;
+    text-align: center;
+    color:#fff;
+    text-indent: 0;
+}
+header form{
+    position: absolute;
+    top:65px;
+    left: 0;    right: 0;
+    padding:20px 0;
+    text-align: center;
+    box-shadow: 0 5px 5px rgba(0,0,0,.1);    
+    background: #fff;
+    z-index: -1;
+    transition: .3s linear;
+}
+header form.active{
+    top: calc(100% + 1px);
+    z-index: 2;
+}
+header form input[type="text"]{
+    display:inline-block;
+    height:40px;
+    border:none;
+    border-bottom:1px solid #34404b;
+    width:540px;
+    margin-right: 10px;    
+    outline: none;
+}
+header form input[type="text"]:focus{
+    border-bottom-color: #ff5912;
+}
+header form input[type="submit"]{
+    display: inline-block;
+    border: none;
+    vertical-align: bottom;
+    cursor: pointer;
+}
+header form input[type="submit"].sprite:hover{
+    background-position-y: -30px;
+}
