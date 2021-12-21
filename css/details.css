@@ -1,0 +1,121 @@
+.product_info{
+    padding:100px 0 130px;
+    background: #fff;
+}
+.product_pictures{
+    text-align: center;
+}
+.product_pictures > img{
+    margin-bottom: 70px;
+}
+.product_pictures .thumb_img{
+    display: flex;
+    justify-content: space-between;
+}
+.product_pictures .thumb_img li{
+    position: relative;
+    text-align: center;
+    background: #f4f6f8;
+    width:95px;
+    height:80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border:1px solid #f5ae90;
+    cursor: pointer;
+}
+.product_pictures .thumb_img li::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: #ff5912;
+    opacity: 0;
+    transition: 0.4s;
+}
+.product_pictures .thumb_img li.active::before{
+    opacity: .5;
+}
+.product_specs > p{
+    line-height: 1.6;
+}
+form hr{
+    border:none;
+    border-bottom:1px solid #edeff1;
+    margin: 30px 0;
+}
+.option{
+    padding:0 15px;
+}
+.option h4{
+    display: inline-block;
+    font-size:18px;
+    font-weight: 600;
+    color:#34404b;
+    margin-right: 20px;
+}
+.option .divider{
+    color:#edeff1;
+}
+.option .size input{
+    display: none;
+}
+.option .size label{
+    font-size: 14px;
+    transition: .3s;
+    padding-right:5px;
+    cursor: pointer;
+}
+.option .size input:checked + label{
+    font-size: 18px;
+    color:#ff5912;
+    font-weight: 800;
+}
+.option .quantity input{
+    width:30px;
+    border:none;
+    color:#ff5912;
+    text-align: center;
+    font-weight: 600;
+    font-size:18px;
+}
+.order_now{
+    display: flex;
+    align-items: center;
+}
+.order_now ul{
+    display: flex;
+    width:120px;
+    justify-content: space-between;
+    margin-right: 25px;
+    align-items: center;
+}
+.total_price .price{
+    display: inline-block;
+    font-weight: 600;
+    font-size:18px;
+    color: #34404b;
+    margin-right: 20px;
+}
+.order_now button{
+    padding:0 24px;
+    height:50px;
+    line-height:50px;
+    color:#fff;
+    font-size:18px;
+    background: #ff5912;
+    font-weight: 600;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+}
+.order_summary{
+    align-items: center;
+}
+.quantity span{
+    font-size:20px;
+    font-weight: 800;
+    cursor: pointer;
+}

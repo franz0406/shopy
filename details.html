@@ -38,6 +38,7 @@
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/details.css">
     <link rel="stylesheet" href="./css/footer.css">
     <!-- jquery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -101,52 +102,65 @@
     <main> <!--main-->
 
         <!-- main_slide section starts -->
-        <section class="main_slide">
-            <h2 class="hidden">main_slide</h2>
-            <ul>
-                <li class="slide slide1">
-                    <div class="container slide_contents">
-                        <div class="contents jumbotrom">
-                            <h2>FULL WINTER KIT 1</h2>
-                            <h3>Half Jacker + Skiny Trousers + Boot leather</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id laborum sint!</p>
-                            <div class="price_order">
-                                <span class="price">Price : 120$</span>
-                                <span class="cart sprite">cart</span>
-                                <a href="#" class="order_now">Order now</a>
-                            </div>
-                        </div>
+        <section class="product_info">
+            <h2 class="hidden">product_info</h2>
+            <div class="container">
+                <div class="row">
+                    <div class="product_pictures col-md-5">
+                        <img src="./images/cote_big_1.png" alt="coat" class="big_img">
+                        <ul class="thumb_img">
+                            <li class="active"><img src="./images/cote_thumb_1.png" alt="coat" data-target="cote_big_1.png"></li>
+                            <li><img src="./images/cote_thumb_2.png" alt="coat" data-target="cote_big_2.png"></li>
+                            <li><img src="./images/cote_thumb_3.png" alt="coat" data-target="cote_big_3.png"></li>
+                        </ul>
                     </div>
-                </li>  
-                <li class="slide slide1">
-                    <div class="container slide_contents">
-                        <div class="contents jumbotrom">
-                            <h2>FULL WINTER KIT 2</h2>
-                            <h3>Half Jacker + Skiny Trousers + Boot leather</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id laborum sint!</p>
-                            <div class="price_order">
-                                <span class="price">Price : 120$</span>
-                                <span class="cart sprite">cart</span>
-                                <a href="#" class="order_now">Order now</a>
+                    <div class="product_specs col-md-7 jumbotrom">
+                        <h2>FULL WINTER KIT</h2>
+                        <h3>Half Jacket + Skiny Trousers + Boot leather</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry
+                            Lorem Ipsum is simply dummy text of the printing
+                             and typesetting industry</p>
+                        <form action="#">
+                            <hr>
+                            <div class="option row justify-content-between">
+                                <div class="size">
+                                    <h4>Choose size</h4>
+                                    <input type="radio" id="s_size" name="sizes" value="s">
+                                    <label for="s_size">S</label>
+                                    <input type="radio" id="m_size" name="sizes" value="m">
+                                    <label for="m_size">M</label>
+                                    <input type="radio" id="l_size" name="sizes" value="l">
+                                    <label for="l_size">L</label>
+                                    <input type="radio" id="xl_size" name="sizes" value="xl">
+                                    <label for="xl_size">XL</label>
+                                </div>
+                                <span class="divider">|</span>
+                                <div class="quantity" data-unitprice="120">
+                                    <h4>Choose Quantity</h4>
+                                    <span class="plus">+</span>
+                                    <input type="text" value="1" readonly>
+                                    <span class="minus">-</span>
+                                </div>
                             </div>
-                        </div>
+                            <hr>
+                            <div class="option order_summary row justify-content-between">
+                                <div class="total_price">
+                                    <h4>Price</h4>
+                                    <span class="price">120 $</span>
+                                </div>
+                                <div class="order_now">
+                                    <ul>
+                                        <li><a href="#" class="sprite share">share</a></li>
+                                        <li><a href="#" class="sprite addcart">addcart</a></li>
+                                        <li><a href="#" class="sprite wishlist">wishlist</a></li>
+                                    </ul>
+                                    <button type="submit">Order now</button>
+                                </div>
+                            </div>                    
+                        </form>
                     </div>
-                </li>  
-                <li class="slide slide1">
-                    <div class="container slide_contents">
-                        <div class="contents jumbotrom">
-                            <h2>FULL WINTER KIT 3</h2>
-                            <h3>Half Jacker + Skiny Trousers + Boot leather</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id laborum sint!</p>
-                            <div class="price_order">
-                                <span class="price">Price : 120$</span>
-                                <span class="cart sprite">cart</span>
-                                <a href="#" class="order_now">Order now</a>
-                            </div>
-                        </div>
-                    </div>
-                </li>  
-            </ul>
+                </div>
+            </div>
         </section>
         <!-- main_slide section ends -->
 
@@ -155,7 +169,7 @@
 
             <!-- new_arrivals section starts -->    
             <section class="new_arrivals">
-                <h2 class="content_title"><span>new</span> arrivals</h2>
+                <h2 class="content_title"><span>related</span> product</h2>
                 
                 <ul class="new_arrivals_list row">
                     <li id="product_01" class="col-md-3">
@@ -258,80 +272,6 @@
                 <button><span class="sprite"></span></button>
             </section>
             <!-- new_arrivals section ends -->
-
-            <!-- hot_deal_banners section starts -->
-            <section class="hot_deal_banners">
-                <h2 class="hidden">hot_deal_banners</h2>
-                <aside>
-                    <h3 class="hidden">banner</h3>
-                    <div class="aside-left">
-                        <img src="./images/sale_50.png" alt="50% discount">
-                        <div class="content">
-                            <h3>full winter kit</h3>
-                            <p>Half Jacket + Skiny Trousers + Boot leather</p>
-                        </div> 
-                        <div class="price">
-                            <span class="sprite">cart</span>
-                            <p>120<span>$</span></p>
-                        </div>                       
-                    </div>
-                    <div class="aside-right">
-                        <h5>adv <span>area</span></h5>
-                        <p>470 x 100</p>
-                    </div>
-                </aside>
-            </section>
-            <!-- hot_deal_banners section ends --> 
-            
-            <!-- best_sales section starts -->
-            <section class="best_sales">
-                <h2 class="content_title"><span>best</span> sales</h2>
-                <p class="content_desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-                <div class="sales_list">
-                    <ul>
-                        <li>
-                            <img src="./images/best_jacket_01.jpg" alt="best jacket">
-                            <div>
-                                <h3>Reebook Track Jacket</h3>
-                                <div>
-                                    <div>
-                                        <img src="./images/stars.jpg" alt="rating">
-                                        <p>100$</p>
-                                    </div>
-                                    <p>add to cart</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <img src="./images/best_jacket_01.jpg" alt="best jacket">
-                            <div>
-                                 <h3>Reebook Track Jacket</h3>
-                                <div>
-                                    <div>
-                                        <img src="./images/stars.jpg" alt="rating">
-                                        <p>100$</p>
-                                    </div>
-                                    <p>add to cart</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <img src="./images/best_jacket_01.jpg" alt="best jacket">
-                            <div>
-                                <h3>Reebook Track Jacket</h3>
-                                <div>
-                                    <div>
-                                        <img src="./images/stars.jpg" alt="rating">
-                                        <p>100$</p>
-                                    </div>
-                                    <p>add to cart</p>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </section>
-            <!-- best_sales section ends -->
 
             <!-- newsletter section starts -->   
             <section class="newsletter">

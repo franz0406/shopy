@@ -244,3 +244,107 @@
     letter-spacing: 10px;
     padding-top: 5px;
 }
+
+
+/* MAIN BEST SALES SECTION */
+.best_sales ul{
+    display: flex;
+    justify-content: space-between;
+    gap:20px;
+}
+.best_sales ul li{
+    padding: 34px 28px;
+    max-width: 370px;
+    width:100%;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.best_sales ul li > img{
+    width:90px;
+    height:90px;
+    padding-right: 20px;
+    border-right:1px solid #d9dbdf;
+}
+.best_sales ul li > div{
+    padding-left: 20px;    
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+}
+.best_sales ul li > div h3{
+    font-size: 18px;
+    font-weight: 800;
+    padding-bottom: 25px;
+}
+.best_sales ul li > div > div{
+    position: relative;
+}
+.best_sales ul li > div > div > div{
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    left: 0; bottom: 0;
+    opacity: 1;
+    transition: opacity 0.4s;
+}
+.best_sales ul li > div > div > div p{
+    color:#ff5912;
+    font-size: 14px;
+    font-weight: 800;
+}
+.best_sales ul li > div > div > p{
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    left: 0; bottom: 0;
+    color:#ff5912;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 23px;
+    opacity: 0;
+    transition: opacity 0.4s;
+}
+.best_sales ul li:hover > div > div > div{
+    opacity: 0;
+}
+.best_sales ul li:hover > div > div > p{
+    opacity: 1;
+}
+
+
+/* MAIN NEWS LETTER SECTION */
+.newsletter > div{
+    background: #fff;
+    padding:35px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.newsletter > div > div{
+    display: flex;
+}
+.newsletter > div > div h3{
+    text-transform: uppercase;
+    font-size:20px;
+    font-weight: 800;
+    color: #ff5912;
+    margin-right: 20px;
+}
+.newsletter > div > div p{
+    font-style: italic;
+    font-weight: 600;
+}
+.newsletter button{
+    width:150px;
+    line-height: 50px;
+    font-size: 16px;
+    font-weight: 800;
+    color:#fff;
+    border:none;
+    background: #ff5912;
+    cursor: pointer;
+}
