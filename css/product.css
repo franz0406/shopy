@@ -1,0 +1,107 @@
+.category_menu{
+    background: #fff;
+    padding:30px 40px;
+    display: flex;
+}
+.category_menu h3, .list_filters h3{
+    font-size:18px;
+    font-weight: 800;
+    color:#ff5912;
+    margin-right: 30px;
+    width:100px;
+}
+.category_menu ul{
+    display: flex;
+}
+.category_menu ul li{
+    margin-right: 20px;
+}
+.category_menu ul li a, .list_filters label{
+    font-size:14px;
+    font-weight:800;
+    color:#34404b;
+}
+.list_filters{
+    background: #fff;
+    padding:30px 40px;
+    margin:30px 0 0;
+}
+.size_filter, .brand_filter{
+    display: flex;
+    margin-bottom: 20px;
+    align-items: center;
+}
+.list_filters > div:last-child{
+    margin-bottom: 0;
+}
+.list_filters h3{
+    margin-right: 30px;
+}
+.size_filter input,
+.brand_filter input{
+    display: none;
+}
+.list_filters .box{
+    width: 13px;
+    height: 13px;
+    background: #edf0f2;
+    text-indent: -9999em;
+    box-sizing: border-box;
+    margin-right: 12px;
+}
+.list_filters input:checked + .box{
+    background: #fff;
+    border:4px solid #ff5912;
+}
+.list_filters label{
+    margin-right: 12px;
+    cursor: pointer;
+}
+.price_filter{
+    margin-bottom: 20px;
+}
+.price_filter > *{
+    display: inline-block;
+}
+.price_range{
+    width:186px;
+}
+.range_form{
+    width:400px;
+    margin-left: 20px;
+}
+.range_form input{
+    width:45px;
+    height:23px;
+    background: #fff;
+    border: 1px solid #abadaf;
+    text-align: center;
+}
+.price_filter .ui-widget.ui-widget-content{
+    border:none;
+    height:3px;
+    background: #edf0f2;
+}
+.price_filter .ui-slider .ui-slider-handle{
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background: #34404b;
+    border:none;
+    outline: none;
+}
+.price_filter .ui-slider-horizontal .ui-slider-range{
+    background: #34404b;
+}
+.price_filter .price_range span i{
+    position: absolute;
+    left: 50%;
+    top:-20px;
+    transform: translateX(-50%);
+    width:50px;    
+    color:#34404b;
+    font-size: 14px;
+    text-align: center;
+    border:1px solid #cdcecf;
+}
+

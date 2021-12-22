@@ -39,6 +39,7 @@
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/product.css">
     <link rel="stylesheet" href="./css/footer.css">
     <!-- jquery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -116,8 +117,8 @@
                         <li><a href="#">Hot deals</a></li>
                     </ul>
                 </div>
-                <div class="list_filters row">
-                    <div class="price_filter col-md-4">
+                <div class="list_filters">
+                    <div class="price_filter">
                         <h3>Price Filtter</h3>
                         <div class="price_range"></div>
                         <div class="range_form">
@@ -127,7 +128,7 @@
                             <input type="text" id="to" readonly>
                         </div>
                     </div>
-                    <div class="size_filter col-md-4">
+                    <div class="size_filter">
                         <h3>Sizes</h3>
                         <input type="checkbox" id="small" name="size" checked>
                         <span class="box">box</span>
@@ -145,7 +146,7 @@
                         <span class="box">box</span>
                         <label for="xlarge">X large</label>
                     </div>
-                    <div class="brand_filter col-md-4">
+                    <div class="brand_filter">
                         <h3>Brands</h3>
                         <input type="checkbox" id="reebok" name="brand" checked>
                         <span class="box">box</span>
@@ -169,7 +170,6 @@
 
             <!-- new_arrivals section starts -->    
             <section class="new_arrivals">
-                <h2 class="content_title"><span>new</span> arrivals</h2>
                 
                 <ul class="new_arrivals_list row">
                     <li id="product_01" class="col-md-3">

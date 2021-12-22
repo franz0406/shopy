@@ -43,15 +43,34 @@ $(function(){
 
     })
 
-    // 카테고리 필터
+    // 카테고리 필터    
+
     $( ".price_range" ).slider({
         range: true,
         min: 0,
         max: 1000,
         values: [ 10, 500 ],
+        create: function( event, ui ) {
+            let slideVal = $(".price_filter .price_range span");
+            let slideFitstVal = slideVal.filter(":first-of-type");
+            let slideLastVal = slideVal.filter(":last-of-type");
+
+            slideVal.html("<i></i>");
+            
+            slideFitstVal.find("i").text($( ".price_range" ).slider( "values", 0 ));
+            slideLastVal.find("i").text($( ".price_range" ).slider( "values", 1 ));
+        },
         slide: function( event, ui ) {
+            let slideVal = $(".price_filter .price_range span");
+            let slideFitstVal = slideVal.filter(":first-of-type");
+            let slideLastVal = slideVal.filter(":last-of-type");
+
+            slideVal.html("<i></i>");
+
             $("#from").val(ui.values[0]);
             $("#to").val(ui.values[1]);
+            slideFitstVal.find("i").text(ui.values[0]);
+            slideLastVal.find("i").text(ui.values[1]);
         }
     });
     $( "#from" ).val($( ".price_range" ).slider( "values", 0 ));
