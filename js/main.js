@@ -9,6 +9,12 @@ $(function(){
         controls:false,
     });
 
+    const detailsLink = $(".new_arrivals_list > li");
+    
+    detailsLink.click(function(){
+        location.href = "./details.html";
+    })
+
     // 상품상세 이미지 변경
     const productPictures = $(".product_pictures"),
           bigImg = productPictures.find(".big_img"),
@@ -76,4 +82,71 @@ $(function(){
     $( "#from" ).val($( ".price_range" ).slider( "values", 0 ));
     $( "#to" ).val($( ".price_range" ).slider( "values", 1 ));
 
+    $( "#from" ).change(function(){
+        let inputVal = $(this).val();
+        
+        $( ".price_range" ).slider( "values", 0, inputVal );
+
+        let slideVal = $(".price_filter .price_range span");
+        let slideFitstVal = slideVal.filter(":first-of-type");
+
+        slideFitstVal.html("<i></i>");
+        
+        slideFitstVal.find("i").text($( ".price_range" ).slider( "values", 0 ));
+    });
+    $( "#to" ).change(function(){
+        let inputVal = $(this).val();
+        
+        $( ".price_range" ).slider( "values", 1, inputVal );
+
+        let slideVal = $(".price_filter .price_range span");
+        let slideLastVal = slideVal.filter(":last-of-type");
+
+        slideLastVal.html("<i></i>");
+
+        slideLastVal.find("i").text($( ".price_range" ).slider( "values", 1 ));
+    });
+
+    let sizeFilter = $(".size_filter input");
+    let targetList = $(".new_arrivals_list > li");    
+
+    // ISOTOPE 플러그인 상품 필터링
+    let $filters = $(".combi_filters input");
+    // init isotope
+    let $grid = $('.new_arrivals_list').isotope({
+        itemSelector: '.new_arrivals_list > li'
+    });
+
+    let filters = {};
+
+    $($filters).click(function() {
+        var $button = $(this);
+        // get group key
+        var $buttonGroup = $button.parents('div');
+        var filterGroup = $buttonGroup.attr('data-filter-group');
+        // set filter for group
+        filters[ filterGroup ] = $button.val();
+        // combine filters
+        var filterValue = concatValues( filters );
+        // set filter for Isotope
+        $grid.isotope({ filter: filterValue });
+
+        if($button.val() == "*"){            
+            $button.parent("div").find('input').prop('checked', false);
+            $button.prop('checked', true);
+        } else {
+            $button.parent("div").find('input').eq(0).prop('checked', false);
+        }
+    });
+
+    // flatten object by concatting values
+    function concatValues( obj ) {
+        var value = '';
+        for ( var prop in obj ) {
+        value += obj[ prop ];
+        }
+        return value;
+    }
+
+    $grid.isotope({filter:'*'});
 })

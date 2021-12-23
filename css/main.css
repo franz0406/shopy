@@ -148,6 +148,8 @@
 .new_arrivals_list > li{
     height: 365px;
     overflow: hidden;    
+    cursor: pointer;
+    padding-bottom:20px;
 }
 .new_arrivals_list > li .default img{
     height:216px;
@@ -176,6 +178,7 @@
     border: none;
     margin-top: 80px;
     background: #fff;
+    cursor: pointer;
 }
 .new_arrivals > button span{
     display: inline-block;
@@ -260,6 +263,10 @@
     display: flex;
     align-items: center;
     cursor: pointer;
+    transition: .3s;
+}
+.best_sales ul li:hover{
+    box-shadow: 0 0 5px rgba(0,0,0,.5);
 }
 .best_sales ul li > img{
     width:90px;
